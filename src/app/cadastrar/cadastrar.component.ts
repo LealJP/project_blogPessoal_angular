@@ -10,11 +10,14 @@ import { AuthService } from '../service/auth.service';
 })
 export class CadastrarComponent implements OnInit {
 
+    //declaração global de objetos e variáves
   user: User = new User
   confirmarSenha: string
   tipoUsuario: string
 
   constructor(
+
+   //injeção de dependências
     private authService: AuthService,
     private rota: Router
   ) { }
@@ -40,6 +43,7 @@ export class CadastrarComponent implements OnInit {
       alert('As senhas estão incorretas.')
 
     } else { 
+      
       this.authService.cadastrar(this.user).subscribe((resp: User) => {
         this.user = resp
         this.rota.navigate(['/entrar'])
