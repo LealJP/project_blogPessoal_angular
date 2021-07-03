@@ -11,7 +11,7 @@ import { AuthService } from '../service/auth.service';
 export class CadastrarComponent implements OnInit {
 
     //declaração global de objetos e variáves
-  user: User = new User
+  user: User = new User()
   confirmarSenha: string
   tipoUsuario: string
 
