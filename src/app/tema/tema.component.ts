@@ -31,7 +31,7 @@ export class TemaComponent implements OnInit {
 
   findAllTemas(){
     this.temaService.getAllTema().subscribe((resp: Tema[])=>{
-      this.listaTemas = resp //a variável listaTemas recebe a resp todos os temas, e essa variável foi criada na tema.service.ts 
+      this.listaTemas = resp //a variável listaTemas recebe a resp com todos os temas, e essa resposta foi criada na tema.service.ts (o método getAllTema)
     })
   }
   cadastrar(){
