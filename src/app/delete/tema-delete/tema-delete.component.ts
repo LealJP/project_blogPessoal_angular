@@ -26,7 +26,7 @@ export class TemaDeleteComponent implements OnInit {
       this.router.navigate(['/entrar'])
     }
     
-    this.idTema= this.route.snapshot.params['id']
+    this.idTema= this.route.snapshot.params['id'] //pegar o parâmetro passado pelo caminho/rota
     this.findByIdTema(this.idTema)
   }
 

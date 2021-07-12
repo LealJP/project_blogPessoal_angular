@@ -14,6 +14,8 @@ export class AuthService {
     private http: HttpClient //criando um objeto do tipo HttpClient que foi importado no arquvio app.module.ts
   ) { }
 
+
+
   entrar(userLogin: UserLogin): Observable<UserLogin>{
     return this.http.post<UserLogin>('https://juciblogpessoal.herokuapp.com/usuarios/logar', userLogin)
      
@@ -23,6 +25,9 @@ export class AuthService {
     return this.http.post<User>('https://juciblogpessoal.herokuapp.com/usuarios/cadastrar/', user)
   }
 
+  getByIdUser(id: number): Observable<User>{
+    return this.http.get<User>(`https://juciblogpessoal.herokuapp.com/usuarios/${id}`)
+  }
   logado(){
     let ok: boolean = false
 
